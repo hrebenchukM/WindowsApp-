@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Game", "Game\Game.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tic tac toe", "tic tac toe menu\tic tac toe.csproj", "{E7302EB6-ED07-4A7B-961B-3C4FD6022CC8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tic tac toe menu2", "tic tac toe menu2\tic tac toe menu2.csproj", "{A8B85955-5DD2-49A1-9A61-28840AF57C3A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{E7302EB6-ED07-4A7B-961B-3C4FD6022CC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7302EB6-ED07-4A7B-961B-3C4FD6022CC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7302EB6-ED07-4A7B-961B-3C4FD6022CC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8B85955-5DD2-49A1-9A61-28840AF57C3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8B85955-5DD2-49A1-9A61-28840AF57C3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8B85955-5DD2-49A1-9A61-28840AF57C3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8B85955-5DD2-49A1-9A61-28840AF57C3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
