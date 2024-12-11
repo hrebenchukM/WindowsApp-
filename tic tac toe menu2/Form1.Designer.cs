@@ -41,15 +41,15 @@
             menuStrip1 = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
             newToolStripMenuItem = new ToolStripMenuItem();
-            openToolStripMenuItem = new ToolStripMenuItem();
+            exitToolStripMenuItem = new ToolStripMenuItem();
+            уровеньToolStripMenuItem = new ToolStripMenuItem();
             easyToolStripMenuItem = new ToolStripMenuItem();
             hardToolStripMenuItem = new ToolStripMenuItem();
-            firstComputerToolStripMenuItem = new ToolStripMenuItem();
-            exitToolStripMenuItem = new ToolStripMenuItem();
+            первымХодитToolStripMenuItem = new ToolStripMenuItem();
+            computerToolStripMenuItem = new ToolStripMenuItem();
+            playerToolStripMenuItem = new ToolStripMenuItem();
             toolStrip1 = new ToolStrip();
             toolStripButton1 = new ToolStripButton();
-            yesComputerToolStripMenuItem = new ToolStripMenuItem();
-            noComputerToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -137,7 +137,7 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, уровеньToolStripMenuItem, первымХодитToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(288, 24);
@@ -146,7 +146,7 @@
             // 
             // fileToolStripMenuItem
             // 
-            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { newToolStripMenuItem, openToolStripMenuItem, firstComputerToolStripMenuItem, exitToolStripMenuItem });
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { newToolStripMenuItem, exitToolStripMenuItem });
             fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             fileToolStripMenuItem.Size = new Size(46, 20);
             fileToolStripMenuItem.Text = "&Игра";
@@ -154,16 +154,23 @@
             // newToolStripMenuItem
             // 
             newToolStripMenuItem.Name = "newToolStripMenuItem";
-            newToolStripMenuItem.Size = new Size(220, 22);
+            newToolStripMenuItem.Size = new Size(141, 22);
             newToolStripMenuItem.Text = "&Начать игру";
             newToolStripMenuItem.Click += startGameToolStripMenuItem_Click;
             // 
-            // openToolStripMenuItem
+            // exitToolStripMenuItem
             // 
-            openToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { easyToolStripMenuItem, hardToolStripMenuItem });
-            openToolStripMenuItem.Name = "openToolStripMenuItem";
-            openToolStripMenuItem.Size = new Size(220, 22);
-            openToolStripMenuItem.Text = "Уровень";
+            exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            exitToolStripMenuItem.Size = new Size(141, 22);
+            exitToolStripMenuItem.Text = "Выход";
+            exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
+            // 
+            // уровеньToolStripMenuItem
+            // 
+            уровеньToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { easyToolStripMenuItem, hardToolStripMenuItem });
+            уровеньToolStripMenuItem.Name = "уровеньToolStripMenuItem";
+            уровеньToolStripMenuItem.Size = new Size(65, 20);
+            уровеньToolStripMenuItem.Text = "Уровень";
             // 
             // easyToolStripMenuItem
             // 
@@ -179,19 +186,26 @@
             hardToolStripMenuItem.Text = "Сложный";
             hardToolStripMenuItem.Click += hardToolStripMenuItem_Click;
             // 
-            // firstComputerToolStripMenuItem
+            // первымХодитToolStripMenuItem
             // 
-            firstComputerToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { yesComputerToolStripMenuItem, noComputerToolStripMenuItem });
-            firstComputerToolStripMenuItem.Name = "firstComputerToolStripMenuItem";
-            firstComputerToolStripMenuItem.Size = new Size(220, 22);
-            firstComputerToolStripMenuItem.Text = "Первым ходит компьютер";
+            первымХодитToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { computerToolStripMenuItem, playerToolStripMenuItem });
+            первымХодитToolStripMenuItem.Name = "первымХодитToolStripMenuItem";
+            первымХодитToolStripMenuItem.Size = new Size(99, 20);
+            первымХодитToolStripMenuItem.Text = "Первым ходит";
             // 
-            // exitToolStripMenuItem
+            // computerToolStripMenuItem
             // 
-            exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(220, 22);
-            exitToolStripMenuItem.Text = "Выход";
-            exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
+            computerToolStripMenuItem.Name = "computerToolStripMenuItem";
+            computerToolStripMenuItem.Size = new Size(180, 22);
+            computerToolStripMenuItem.Text = "Компьютер";
+            computerToolStripMenuItem.Click += computerToolStripMenuItem_Click;
+            // 
+            // playerToolStripMenuItem
+            // 
+            playerToolStripMenuItem.Name = "playerToolStripMenuItem";
+            playerToolStripMenuItem.Size = new Size(180, 22);
+            playerToolStripMenuItem.Text = "Игрок";
+            playerToolStripMenuItem.Click += playerToolStripMenuItem_Click;
             // 
             // toolStrip1
             // 
@@ -210,20 +224,6 @@
             toolStripButton1.Name = "toolStripButton1";
             toolStripButton1.Size = new Size(23, 22);
             toolStripButton1.Text = "toolStripButton1";
-            // 
-            // yesComputerToolStripMenuItem
-            // 
-            yesComputerToolStripMenuItem.Name = "yesComputerToolStripMenuItem";
-            yesComputerToolStripMenuItem.Size = new Size(180, 22);
-            yesComputerToolStripMenuItem.Text = "Да";
-            yesComputerToolStripMenuItem.Click += yesToolStripMenuItem_Click;
-            // 
-            // noComputerToolStripMenuItem
-            // 
-            noComputerToolStripMenuItem.Name = "noComputerToolStripMenuItem";
-            noComputerToolStripMenuItem.Size = new Size(180, 22);
-            noComputerToolStripMenuItem.Text = "Нет";
-            noComputerToolStripMenuItem.Click += noComputerToolStripMenuItem_Click;
             // 
             // Form1
             // 
@@ -269,14 +269,14 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem fileToolStripMenuItem;
         private ToolStripMenuItem newToolStripMenuItem;
-        private ToolStripMenuItem openToolStripMenuItem;
-        private ToolStripMenuItem easyToolStripMenuItem;
-        private ToolStripMenuItem hardToolStripMenuItem;
-        private ToolStripMenuItem firstComputerToolStripMenuItem;
         private ToolStripMenuItem exitToolStripMenuItem;
         private ToolStrip toolStrip1;
         private ToolStripButton toolStripButton1;
-        private ToolStripMenuItem yesComputerToolStripMenuItem;
-        private ToolStripMenuItem noComputerToolStripMenuItem;
+        private ToolStripMenuItem уровеньToolStripMenuItem;
+        private ToolStripMenuItem easyToolStripMenuItem;
+        private ToolStripMenuItem hardToolStripMenuItem;
+        private ToolStripMenuItem первымХодитToolStripMenuItem;
+        private ToolStripMenuItem computerToolStripMenuItem;
+        private ToolStripMenuItem playerToolStripMenuItem;
     }
 }

@@ -3,6 +3,7 @@ namespace tic_tac_toe_menu2
     public partial class Form1 : Form
     {
         private bool playerX = true;
+        private bool firstPlayerX = true;
         private bool easy = true;
         private Image imgX = Image.FromFile(@"Resources\x.png");
         private Image imgO = Image.FromFile(@"Resources\o.png");
@@ -16,7 +17,7 @@ namespace tic_tac_toe_menu2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // Обработчик загрузки формы не требует особых действий в данном контексте.
+           
         }
 
         private void button_Click(object sender, EventArgs e)
@@ -39,7 +40,20 @@ namespace tic_tac_toe_menu2
 
         private void startGameToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (!easyToolStripMenuItem.Checked && !hardToolStripMenuItem.Checked)
+            {
+                MessageBox.Show("Выберите уровень - Легкий/Сложный");
+                return;
+            }
+
+            if (!playerToolStripMenuItem.Checked && !computerToolStripMenuItem.Checked)
+            {
+                MessageBox.Show("Выберите, кто ходит первым - Игрок/Компьютер");
+                return;
+            }
+
             Reset();
+            playerX = firstPlayerX;
             if (!playerX)
             {
                 ComputerMove();
@@ -56,32 +70,41 @@ namespace tic_tac_toe_menu2
         private void hardToolStripMenuItem_Click(object sender, EventArgs e)
         {
             easy = false;
-            MessageBox.Show("Уровень сложности: Сложный");
+            easyToolStripMenuItem.Checked = false;
+            hardToolStripMenuItem.Checked = true;
+            //MessageBox.Show("Уровень сложности: Сложный");
         }
 
         private void easyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             easy = true;
-            MessageBox.Show("Уровень сложности: Легкий");
+            hardToolStripMenuItem.Checked = false;
+            easyToolStripMenuItem.Checked = true;
+            //MessageBox.Show("Уровень сложности: Легкий");
            
         }
-        private void yesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void computerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            playerX = false;
+            firstPlayerX = false;
             Reset();
-            MessageBox.Show("Первый ход: Компьютер");
+            playerToolStripMenuItem.Checked = false;
+            computerToolStripMenuItem.Checked = true;
+            //MessageBox.Show("Первый ход: Компьютер");
 
         }
 
-        private void noComputerToolStripMenuItem_Click(object sender, EventArgs e)
+        private void playerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            playerX = true;
-            MessageBox.Show("Первый ход: Игрок");
+            firstPlayerX = true;
+            computerToolStripMenuItem.Checked = false;
+            playerToolStripMenuItem.Checked = true;
+            //MessageBox.Show("Первый ход: Игрок");
         }
 
 
         private void ComputerMove()
         {
+            //MessageBox.Show("ход: Компьютер");
             if (easy)
             {
                 RandomMove();
@@ -99,6 +122,7 @@ namespace tic_tac_toe_menu2
 
         private void RandomMove()
         {
+            //MessageBox.Show("Легкий рандомный ход");
             List<Button> emptyButtons = gameBtns.Where(btn => btn.BackgroundImage == null).ToList();
 
             if (emptyButtons.Count > 0)
@@ -112,6 +136,7 @@ namespace tic_tac_toe_menu2
 
         private void SmartMove()
         {
+            //MessageBox.Show("Сложный смарт ход");
             List<Button> emptyButtons = gameBtns.Where(btn => btn.BackgroundImage == null).ToList();
 
             // Попытка выиграть
@@ -170,8 +195,7 @@ namespace tic_tac_toe_menu2
             {
                 btn.BackgroundImage = null;
             }
-
-            playerX = true;
+            playerX = firstPlayerX;
         }
 
         private bool CheckLine(Button b1, Button b2, Button b3)
