@@ -49,7 +49,12 @@
             computerToolStripMenuItem = new ToolStripMenuItem();
             playerToolStripMenuItem = new ToolStripMenuItem();
             toolStrip1 = new ToolStrip();
-            toolStripButton1 = new ToolStripButton();
+            toolStripStartButton1 = new ToolStripButton();
+            toolStripExitButton2 = new ToolStripButton();
+            toolStripEasyButton1 = new ToolStripButton();
+            toolStripHardButton1 = new ToolStripButton();
+            toolStripComputerButton1 = new ToolStripButton();
+            toolStripPlayerButton1 = new ToolStripButton();
             menuStrip1.SuspendLayout();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -140,7 +145,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, уровеньToolStripMenuItem, первымХодитToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(288, 24);
+            menuStrip1.Size = new Size(290, 24);
             menuStrip1.TabIndex = 9;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -175,14 +180,14 @@
             // easyToolStripMenuItem
             // 
             easyToolStripMenuItem.Name = "easyToolStripMenuItem";
-            easyToolStripMenuItem.Size = new Size(180, 22);
+            easyToolStripMenuItem.Size = new Size(128, 22);
             easyToolStripMenuItem.Text = "Легкий";
             easyToolStripMenuItem.Click += easyToolStripMenuItem_Click;
             // 
             // hardToolStripMenuItem
             // 
             hardToolStripMenuItem.Name = "hardToolStripMenuItem";
-            hardToolStripMenuItem.Size = new Size(180, 22);
+            hardToolStripMenuItem.Size = new Size(128, 22);
             hardToolStripMenuItem.Text = "Сложный";
             hardToolStripMenuItem.Click += hardToolStripMenuItem_Click;
             // 
@@ -196,40 +201,91 @@
             // computerToolStripMenuItem
             // 
             computerToolStripMenuItem.Name = "computerToolStripMenuItem";
-            computerToolStripMenuItem.Size = new Size(180, 22);
+            computerToolStripMenuItem.Size = new Size(138, 22);
             computerToolStripMenuItem.Text = "Компьютер";
             computerToolStripMenuItem.Click += computerToolStripMenuItem_Click;
             // 
             // playerToolStripMenuItem
             // 
             playerToolStripMenuItem.Name = "playerToolStripMenuItem";
-            playerToolStripMenuItem.Size = new Size(180, 22);
+            playerToolStripMenuItem.Size = new Size(138, 22);
             playerToolStripMenuItem.Text = "Игрок";
             playerToolStripMenuItem.Click += playerToolStripMenuItem_Click;
             // 
             // toolStrip1
             // 
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton1 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripStartButton1, toolStripExitButton2, toolStripEasyButton1, toolStripHardButton1, toolStripComputerButton1, toolStripPlayerButton1 });
             toolStrip1.Location = new Point(0, 24);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(288, 25);
+            toolStrip1.Size = new Size(290, 25);
             toolStrip1.TabIndex = 14;
             toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // toolStripStartButton1
             // 
-            toolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton1.Image = (Image)resources.GetObject("toolStripButton1.Image");
-            toolStripButton1.ImageTransparentColor = Color.Magenta;
-            toolStripButton1.Name = "toolStripButton1";
-            toolStripButton1.Size = new Size(23, 22);
-            toolStripButton1.Text = "toolStripButton1";
+            toolStripStartButton1.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripStartButton1.Image = (Image)resources.GetObject("toolStripStartButton1.Image");
+            toolStripStartButton1.ImageTransparentColor = Color.Magenta;
+            toolStripStartButton1.Name = "toolStripStartButton1";
+            toolStripStartButton1.Size = new Size(23, 22);
+            toolStripStartButton1.Text = "toolStripButton1";
+            toolStripStartButton1.Click += startGameToolStripMenuItem_Click;
+            // 
+            // toolStripExitButton2
+            // 
+            toolStripExitButton2.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripExitButton2.Image = (Image)resources.GetObject("toolStripExitButton2.Image");
+            toolStripExitButton2.ImageTransparentColor = Color.Magenta;
+            toolStripExitButton2.Name = "toolStripExitButton2";
+            toolStripExitButton2.Size = new Size(23, 22);
+            toolStripExitButton2.Text = "toolStripButton2";
+            toolStripExitButton2.Click += exitToolStripMenuItem_Click;
+            // 
+            // toolStripEasyButton1
+            // 
+            toolStripEasyButton1.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripEasyButton1.Image = (Image)resources.GetObject("toolStripEasyButton1.Image");
+            toolStripEasyButton1.ImageTransparentColor = Color.Magenta;
+            toolStripEasyButton1.Name = "toolStripEasyButton1";
+            toolStripEasyButton1.Size = new Size(23, 22);
+            toolStripEasyButton1.Text = "toolStripButton1";
+            toolStripEasyButton1.Click += easyToolStripMenuItem_Click;
+            // 
+            // toolStripHardButton1
+            // 
+            toolStripHardButton1.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripHardButton1.Image = (Image)resources.GetObject("toolStripHardButton1.Image");
+            toolStripHardButton1.ImageTransparentColor = Color.Magenta;
+            toolStripHardButton1.Name = "toolStripHardButton1";
+            toolStripHardButton1.Size = new Size(23, 22);
+            toolStripHardButton1.Text = "toolStripButton1";
+            toolStripHardButton1.Click += hardToolStripMenuItem_Click;
+            // 
+            // toolStripComputerButton1
+            // 
+            toolStripComputerButton1.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripComputerButton1.Image = (Image)resources.GetObject("toolStripComputerButton1.Image");
+            toolStripComputerButton1.ImageTransparentColor = Color.Magenta;
+            toolStripComputerButton1.Name = "toolStripComputerButton1";
+            toolStripComputerButton1.Size = new Size(23, 22);
+            toolStripComputerButton1.Text = "toolStripButton1";
+            toolStripComputerButton1.Click += computerToolStripMenuItem_Click;
+            // 
+            // toolStripPlayerButton1
+            // 
+            toolStripPlayerButton1.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripPlayerButton1.Image = (Image)resources.GetObject("toolStripPlayerButton1.Image");
+            toolStripPlayerButton1.ImageTransparentColor = Color.Magenta;
+            toolStripPlayerButton1.Name = "toolStripPlayerButton1";
+            toolStripPlayerButton1.Size = new Size(23, 22);
+            toolStripPlayerButton1.Text = "toolStripButton1";
+            toolStripPlayerButton1.Click += playerToolStripMenuItem_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(288, 336);
+            ClientSize = new Size(290, 336);
             Controls.Add(toolStrip1);
             Controls.Add(button9);
             Controls.Add(button8);
@@ -271,12 +327,17 @@
         private ToolStripMenuItem newToolStripMenuItem;
         private ToolStripMenuItem exitToolStripMenuItem;
         private ToolStrip toolStrip1;
-        private ToolStripButton toolStripButton1;
+        private ToolStripButton toolStripStartButton1;
         private ToolStripMenuItem уровеньToolStripMenuItem;
         private ToolStripMenuItem easyToolStripMenuItem;
         private ToolStripMenuItem hardToolStripMenuItem;
         private ToolStripMenuItem первымХодитToolStripMenuItem;
         private ToolStripMenuItem computerToolStripMenuItem;
         private ToolStripMenuItem playerToolStripMenuItem;
+        private ToolStripButton toolStripExitButton2;
+        private ToolStripButton toolStripEasyButton1;
+        private ToolStripButton toolStripHardButton1;
+        private ToolStripButton toolStripComputerButton1;
+        private ToolStripButton toolStripPlayerButton1;
     }
 }

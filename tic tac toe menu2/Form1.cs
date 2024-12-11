@@ -17,7 +17,7 @@ namespace tic_tac_toe_menu2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         private void button_Click(object sender, EventArgs e)
@@ -60,7 +60,7 @@ namespace tic_tac_toe_menu2
             }
         }
 
-     
+
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -72,7 +72,7 @@ namespace tic_tac_toe_menu2
             easy = false;
             easyToolStripMenuItem.Checked = false;
             hardToolStripMenuItem.Checked = true;
-            //MessageBox.Show("Уровень сложности: Сложный");
+            MessageBox.Show("Уровень сложности: Сложный");
         }
 
         private void easyToolStripMenuItem_Click(object sender, EventArgs e)
@@ -80,8 +80,8 @@ namespace tic_tac_toe_menu2
             easy = true;
             hardToolStripMenuItem.Checked = false;
             easyToolStripMenuItem.Checked = true;
-            //MessageBox.Show("Уровень сложности: Легкий");
-           
+            MessageBox.Show("Уровень сложности: Легкий");
+
         }
         private void computerToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -89,7 +89,7 @@ namespace tic_tac_toe_menu2
             Reset();
             playerToolStripMenuItem.Checked = false;
             computerToolStripMenuItem.Checked = true;
-            //MessageBox.Show("Первый ход: Компьютер");
+            MessageBox.Show("Первый ход: Компьютер");
 
         }
 
@@ -98,7 +98,7 @@ namespace tic_tac_toe_menu2
             firstPlayerX = true;
             computerToolStripMenuItem.Checked = false;
             playerToolStripMenuItem.Checked = true;
-            //MessageBox.Show("Первый ход: Игрок");
+            MessageBox.Show("Первый ход: Игрок");
         }
 
 
@@ -217,6 +217,7 @@ namespace tic_tac_toe_menu2
                    CheckLine(button3, button5, button7);
         }
 
-      
+       
+
     }
 }
