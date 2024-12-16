@@ -76,21 +76,21 @@
             // OpenToolStripMenuItem
             // 
             OpenToolStripMenuItem.Name = "OpenToolStripMenuItem";
-            OpenToolStripMenuItem.Size = new Size(180, 22);
+            OpenToolStripMenuItem.Size = new Size(133, 22);
             OpenToolStripMenuItem.Text = "Открыть";
             OpenToolStripMenuItem.Click += OpenToolStripMenuItem_Click;
             // 
             // SaveToolStripMenuItem
             // 
             SaveToolStripMenuItem.Name = "SaveToolStripMenuItem";
-            SaveToolStripMenuItem.Size = new Size(180, 22);
+            SaveToolStripMenuItem.Size = new Size(133, 22);
             SaveToolStripMenuItem.Text = "Сохранить";
             SaveToolStripMenuItem.Click += SaveToolStripMenuItem_Click;
             // 
             // выйтиToolStripMenuItem
             // 
             выйтиToolStripMenuItem.Name = "выйтиToolStripMenuItem";
-            выйтиToolStripMenuItem.Size = new Size(180, 22);
+            выйтиToolStripMenuItem.Size = new Size(133, 22);
             выйтиToolStripMenuItem.Text = "Выйти";
             // 
             // опцииToolStripMenuItem
@@ -181,7 +181,9 @@
             Controls.Add(checkBox1);
             Controls.Add(listBox1);
             Controls.Add(menuStrip1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             MainMenuStrip = menuStrip1;
+            MaximizeBox = false;
             Name = "Form1";
             Text = "Авторы и книги";
             menuStrip1.ResumeLayout(false);
