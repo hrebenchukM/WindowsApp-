@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tic tac toe menu2", "tic ta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Books", "Books\Books.csproj", "{248D31D3-1AFB-4CA5-A1C0-750604A0C5CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tic tac toe MVP", "tic tac toe MVP\tic tac toe MVP.csproj", "{E67FE579-5893-40CE-B18B-A5CA8C802E68}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{248D31D3-1AFB-4CA5-A1C0-750604A0C5CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{248D31D3-1AFB-4CA5-A1C0-750604A0C5CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{248D31D3-1AFB-4CA5-A1C0-750604A0C5CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E67FE579-5893-40CE-B18B-A5CA8C802E68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E67FE579-5893-40CE-B18B-A5CA8C802E68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E67FE579-5893-40CE-B18B-A5CA8C802E68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E67FE579-5893-40CE-B18B-A5CA8C802E68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
